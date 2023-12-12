@@ -5,7 +5,7 @@ const state = () => ({
     pks: [],
     pks_active: [],
     currentPage: 1,
-    itemsPerPage: 10,
+    itemsPerPage: 2,
 })
 
 // getters

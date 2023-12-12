@@ -9,8 +9,10 @@
           <router-link to="/pokemon">Pokemon</router-link> /
           <router-link to="/pokemonv1">Pokemon V1</router-link> /
           <router-link to="/pokemonv2">Pokemon V2</router-link> /
+          <router-link to="/pokemonv3">Pokemon V3</router-link> /
           <router-link to="/post">Post</router-link> /
-          <router-link to="/postv2">Post V2</router-link>
+          <router-link to="/postv2">Post V2</router-link> /
+          <router-link to="/music">Music</router-link> /
         </h3>
       </div>
     </div>
