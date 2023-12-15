@@ -1,0 +1,41 @@
+{
+  "message": "success",
+  "count": 13,
+  "data": [
+    {
+      "id": 1,
+      "name": "...And Justice For All",
+      "year": 1988,
+      "createdAt": "2023-12-07T06:50:58.000Z",
+      "updatedAt": "2023-12-07T06:50:58.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Black Album",
+      "year": 1991,
+      "createdAt": "2023-12-07T06:50:58.000Z",
+      "updatedAt": "2023-12-07T06:50:58.000Z"
+    },
+    {
+      "id": 3,
+      "name": "Master of Puppets",
+      "year": 1986,
+      "createdAt": "2023-12-07T06:50:58.000Z",
+      "updatedAt": "2023-12-07T06:50:58.000Z"
+    },
+    {
+      "id": 4,
+      "name": "Endgame",
+      "year": 2009,
+      "createdAt": "2023-12-07T06:50:58.000Z",
+      "updatedAt": "2023-12-07T06:50:58.000Z"
+    },
+    {
+      "id": 5,
+      "name": "Peace Sells",
+      "year": 1986,
+      "createdAt": "2023-12-07T06:50:58.000Z",
+      "updatedAt": "2023-12-07T06:50:58.000Z"
+    }
+  ]
+}

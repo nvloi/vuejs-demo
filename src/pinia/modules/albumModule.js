@@ -16,6 +16,7 @@ export const albumModule = defineStore({
             try {
                 this.isLoading = true;
                 const response = await music.getAlbums(token, page - 1, this.itemsPerPage);
+                console.log(response);
                 this.albums = response.data;
                 this.total = response.count;
                 if (!localStorage.getItem('isAuth')) {
@@ -26,7 +27,7 @@ export const albumModule = defineStore({
                 this.total = 0;
                 console.error("fetchAlbums error");
             } finally {
-                this.isLoading = false; // Set isLoading to false after loading is complete
+                this.isLoading = false;
             }
         },
         async fetchAlbum(token, id) {
@@ -38,7 +39,7 @@ export const albumModule = defineStore({
             } catch (error) {
                 console.error("fetchAlbum error");
             } finally {
-                this.isLoading = false; // Set isLoading to false after loading is complete
+                this.isLoading = false;
             }
         },
         async fetchSongs(token, page, id) {
@@ -60,7 +61,7 @@ export const albumModule = defineStore({
                 this.total = 0;
                 console.error("fetchSongs error");
             } finally {
-                this.isLoading = false; // Set isLoading to false after loading is complete
+                this.isLoading = false;
             }
         },
         async getAlbum(token, albumId) {
@@ -91,6 +92,9 @@ export const albumModule = defineStore({
         },
     },
     getters: {
+        getAlbums(state) {
+            return state.albums
+        },
         getTotalPages() {
             return Math.ceil(this.total / this.itemsPerPage);
         },

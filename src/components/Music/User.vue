@@ -1,12 +1,8 @@
 <script setup>
-import {computed } from "vue";
 import Login from "@/components/Music/Login.vue";
 import {authModule} from "@/pinia/modules/authModule";
 
 const auth = authModule();
-const isAuthenticated = computed(() => auth.isAuth);
-const token = computed(() => auth.token);
-
 </script>
 
 <template>
@@ -18,7 +14,7 @@ const token = computed(() => auth.token);
         <div class="details">
           <div class="log-form">
             <div>Account:</div>
-            <template v-if="isAuthenticated">
+            <template v-if="auth.isAuth">
               <div>User {{ $route.params.id }}</div>
             </template>
             <template v-else>

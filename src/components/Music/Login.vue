@@ -7,8 +7,6 @@ defineProps();
 const username = ref("nvloi");
 const password = ref("123456");
 const auth = authModule();
-const isAuth = computed(() => auth.isAuth);
-const isLoading= computed(() => auth.isLoading);
 const login = async () => {
   await auth.login(username.value, password.value);
 };
@@ -25,10 +23,10 @@ const logout = async () => {
       <div class="details">
         <div class="log-form">
           <div>Account:</div>
-          <template v-if="!isAuth">
+          <template v-if="!auth.isAuth">
             <input type="text" v-model="username" title="username" placeholder="username"/>
             <input type="password" v-model="password" title="password" placeholder="password"/>
-            <template v-if="isLoading">
+            <template v-if="auth.isLoading">
               <img alt="Loading" src="@/assets/hourglass.gif" width="15" height="15"/>
             </template>
             <template v-else>
